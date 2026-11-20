@@ -1,0 +1,6 @@
+[Unit]
+Description=Reboot this host during the configured maintenance window
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'logger -t fault-hub-maintenance "Scheduled reboot requested"; sync; systemctl --no-block reboot'

@@ -1,0 +1,15 @@
+[Unit]
+Description=Ops Hub complete stack self-heal and startup recovery
+Wants=network-online.target caddy.service ops-hub.service ops-hub-self-reporter.service
+After=network-online.target caddy.service ops-hub.service ops-hub-self-reporter.service
+ConditionPathExists=__APP_ROOT__/.env
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=__APP_ROOT__/scripts/boot_recover.sh
+TimeoutStartSec=180
+
+[Install]
+WantedBy=multi-user.target

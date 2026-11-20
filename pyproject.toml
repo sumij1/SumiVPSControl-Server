@@ -1,0 +1,9 @@
+[project]
+name = "ops-hub"
+version = "1.0.0"
+description = "Multi-server monitoring and social feedback aggregation hub"
+requires-python = ">=3.11"
+
+[tool.nonebot]
+plugins = []
+plugin_dirs = ["plugins"]

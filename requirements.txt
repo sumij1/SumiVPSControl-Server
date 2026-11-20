@@ -1,0 +1,12 @@
+nonebot2[fastapi,aiohttp]
+nonebot-adapter-onebot
+nonebot-adapter-telegram
+nonebot-adapter-discord
+fastapi
+uvicorn
+aiosqlite
+httpx
+python-dotenv
+psutil
+cryptography
+paramiko

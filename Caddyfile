@@ -1,0 +1,16 @@
+# Copy this file, then set APP_DOMAIN to your own domain.
+# The default only matches localhost when APP_DOMAIN is unset.
+{$APP_DOMAIN:localhost} {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:8080 {
+		header_up X-Real-IP {remote_host}
+		header_up X-Forwarded-Proto {scheme}
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+}

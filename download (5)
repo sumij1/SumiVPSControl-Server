@@ -1,0 +1,10 @@
+.env
+.venv/
+.verifydeps/
+data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+dist/
+*.zip
+*.log

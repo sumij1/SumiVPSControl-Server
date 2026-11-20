@@ -1,0 +1,9 @@
+*.sh text eol=lf
+*.service text eol=lf
+*.timer text eol=lf
+Caddyfile text eol=lf
+.env.example text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.md text eol=lf
